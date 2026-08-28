@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  background: var(--badges);
+  font-size: 14px;
+  color: var(--main);
+}
+
+.badge svg {
+  color: var(--gray);
+  font-size: 14px;
+}

@@ -1,0 +1,38 @@
+.header {
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--main);
+  letter-spacing: -0.02em;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.navLink {
+  color: var(--gray);
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover,
+.navLink.active {
+  color: var(--main);
+  font-weight: 600;
+}

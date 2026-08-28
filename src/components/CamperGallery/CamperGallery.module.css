@@ -1,0 +1,44 @@
+.gallery {
+  width: 640px;
+  flex-shrink: 0;
+}
+
+.mainSwiper {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.mainImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.thumbsSwiper {
+  width: 100%;
+}
+
+.thumbWrapper {
+  position: relative;
+  width: 100%;
+  height: 148px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.gallery :global(.swiper-slide-thumb-active) .thumbWrapper {
+  outline: 2px solid var(--main);
+  outline-offset: 2px;
+}
+
+.gallery :global(.swiper-button-next),
+.gallery :global(.swiper-button-prev) {
+  color: var(--main);
+}

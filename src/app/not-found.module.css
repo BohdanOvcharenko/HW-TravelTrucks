@@ -1,0 +1,33 @@
+.main {
+  min-height: calc(100vh - 81px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 64px;
+  text-align: center;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.text {
+  font-size: 18px;
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+.link {
+  padding: 14px 32px;
+  border-radius: 200px;
+  background: var(--button);
+  color: var(--white);
+  font-weight: 500;
+}
+
+.link:hover {
+  background: var(--button-hover);
+}

@@ -1,0 +1,11 @@
+.main {
+  min-height: calc(100vh - 81px);
+  padding: 48px 0 64px;
+  background: var(--white);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
