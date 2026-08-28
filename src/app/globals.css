@@ -16,6 +16,23 @@
   --error: #e44848;
   --error-hover: #d84343;
   --error-bg: #fef3f2;
+
+  --container-padding: 16px;
+  --header-offset: 57px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --container-padding: 32px;
+    --header-offset: 65px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --container-padding: 64px;
+    --header-offset: 81px;
+  }
 }
 
 *,

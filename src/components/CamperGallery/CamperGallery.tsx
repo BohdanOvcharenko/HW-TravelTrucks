@@ -33,7 +33,7 @@ export default function CamperGallery({
     <div className={styles.gallery}>
       <Swiper
         modules={[FreeMode, Navigation, Thumbs]}
-        spaceBetween={16}
+        spaceBetween={12}
         navigation
         thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
         className={styles.mainSwiper}
@@ -45,7 +45,7 @@ export default function CamperGallery({
                 src={image.original}
                 alt={`${camperName} photo ${image.order}`}
                 fill
-                sizes="638px"
+                sizes="(max-width: 767px) 100vw, (max-width: 1279px) 90vw, 638px"
                 className={styles.image}
                 priority={image.order === 1}
               />
@@ -57,8 +57,8 @@ export default function CamperGallery({
       <Swiper
         modules={[FreeMode, Navigation, Thumbs]}
         onSwiper={setThumbsSwiper}
-        spaceBetween={16}
-        slidesPerView={4}
+        spaceBetween={12}
+        slidesPerView="auto"
         freeMode
         watchSlidesProgress
         className={styles.thumbsSwiper}
@@ -70,7 +70,7 @@ export default function CamperGallery({
                 src={image.thumb}
                 alt={`${camperName} thumbnail ${image.order}`}
                 fill
-                sizes="136px"
+                sizes="(max-width: 767px) 72px, (max-width: 1279px) 100px, 136px"
                 className={styles.image}
               />
             </div>

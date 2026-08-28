@@ -6,7 +6,7 @@
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 24px 64px;
+  padding: 16px var(--container-padding);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,14 +17,19 @@
   align-items: center;
 }
 
+.logo img {
+  width: 110px;
+  height: auto;
+}
+
 .nav {
   display: flex;
-  gap: 32px;
+  gap: 20px;
 }
 
 .navLink {
   color: var(--gray);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   transition: color 0.2s ease;
 }
@@ -33,4 +38,42 @@
 .navLink.active {
   color: var(--main);
   font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .logo img {
+    width: 124px;
+  }
+
+  .nav {
+    gap: 28px;
+  }
+
+  .navLink {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .logo img {
+    width: 136px;
+  }
+
+  .nav {
+    gap: 32px;
+  }
+
+  .navLink {
+    font-size: 16px;
+  }
 }

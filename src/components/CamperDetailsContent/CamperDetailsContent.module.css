@@ -1,13 +1,14 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 64px;
+  gap: 32px;
 }
 
 .topSection {
   display: flex;
-  gap: 64px;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
 }
 
 .info {
@@ -16,58 +17,60 @@
 }
 
 .title {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--main);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
+  gap: 8px 12px;
+  margin-bottom: 12px;
 }
 
 .ratingRow {
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--main);
 }
 
 .star {
   color: var(--rating);
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .location {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--main);
 }
 
 .price {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--main);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .description {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.6;
   color: var(--text);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .bottomSection {
   display: flex;
-  gap: 64px;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 32px;
+  align-items: stretch;
 }
 
 .reviewsSection {
@@ -76,8 +79,92 @@
 }
 
 .sectionTitle {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--main);
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .page {
+    gap: 48px;
+  }
+
+  .topSection {
+    gap: 32px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .ratingRow,
+  .location {
+    font-size: 15px;
+  }
+
+  .star {
+    font-size: 15px;
+  }
+
+  .price {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .description {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .bottomSection {
+    gap: 40px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page {
+    gap: 64px;
+  }
+
+  .topSection {
+    flex-direction: row;
+    gap: 64px;
+    align-items: flex-start;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .ratingRow,
+  .location {
+    font-size: 16px;
+  }
+
+  .star {
+    font-size: 16px;
+  }
+
+  .meta {
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .bottomSection {
+    flex-direction: row;
+    gap: 64px;
+    align-items: flex-start;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
 }

@@ -23,7 +23,7 @@ export default function CamperCard({ camper, priority = false }: CamperCardProps
           src={camper.coverImage}
           alt={camper.name}
           fill
-          sizes="219px"
+          sizes="(max-width: 767px) 100vw, (max-width: 1279px) 90vw, 219px"
           priority={priority}
           className={styles.image}
         />

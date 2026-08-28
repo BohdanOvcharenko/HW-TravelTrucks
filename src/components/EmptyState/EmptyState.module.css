@@ -3,17 +3,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 480px;
-  padding: 64px 48px;
-  border-radius: 10px;
+  min-height: 360px;
+  padding: 32px 20px;
+  border-radius: 16px;
   background: var(--inputs);
   text-align: center;
 }
 
 .illustration {
-  width: 488px;
-  max-width: 100%;
-  margin-bottom: 32px;
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 24px;
 }
 
 .illustration img {
@@ -22,30 +22,34 @@
 }
 
 .title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--main);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .text {
   max-width: 420px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
   color: var(--text);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .actions {
   display: flex;
-  gap: 16px;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
 }
 
 .clearButton {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 14px 32px;
+  padding: 14px 24px;
   border-radius: 200px;
   border: 1px solid var(--gray-light);
   background: var(--white);
@@ -59,7 +63,7 @@
 }
 
 .viewAllButton {
-  padding: 14px 32px;
+  padding: 14px 24px;
   border-radius: 200px;
   background: var(--button);
   color: var(--white);
@@ -69,4 +73,60 @@
 
 .viewAllButton:hover {
   background: var(--button-hover);
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    min-height: 420px;
+    padding: 48px 32px;
+  }
+
+  .illustration {
+    max-width: 400px;
+    margin-bottom: 28px;
+  }
+
+  .title {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .text {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .actions {
+    flex-direction: row;
+    justify-content: center;
+    max-width: none;
+    width: auto;
+    gap: 16px;
+  }
+
+  .clearButton,
+  .viewAllButton {
+    padding: 14px 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .wrapper {
+    min-height: 480px;
+    padding: 64px 48px;
+    border-radius: 10px;
+  }
+
+  .illustration {
+    max-width: 488px;
+    margin-bottom: 32px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .text {
+    margin-bottom: 32px;
+  }
 }
