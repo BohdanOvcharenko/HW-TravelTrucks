@@ -45,7 +45,7 @@ export default function CamperGallery({
                 src={image.original}
                 alt={`${camperName} photo ${image.order}`}
                 fill
-                sizes="640px"
+                sizes="638px"
                 className={styles.image}
                 priority={image.order === 1}
               />
@@ -70,7 +70,7 @@ export default function CamperGallery({
                 src={image.thumb}
                 alt={`${camperName} thumbnail ${image.order}`}
                 fill
-                sizes="148px"
+                sizes="136px"
                 className={styles.image}
               />
             </div>

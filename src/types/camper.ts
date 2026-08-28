@@ -53,10 +53,7 @@ export interface Review {
   createdAt: string;
 }
 
-export interface ReviewsResponse {
-  value: Review[];
-  Count: number;
-}
+export type ReviewsResponse = Review[];
 
 export interface FiltersResponse {
   forms: CamperForm[];

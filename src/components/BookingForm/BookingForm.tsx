@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { IoAlertCircle } from "react-icons/io5";
 import toast from "react-hot-toast";
+import LoadingModal from "@/components/LoadingModal/LoadingModal";
 import { createBookingRequest } from "@/lib/api/campers";
 import styles from "./BookingForm.module.css";
 
@@ -68,7 +69,10 @@ export default function BookingForm({ camperId }: BookingFormProps) {
   };
 
   return (
-    <aside className={styles.formWrapper}>
+    <>
+      {isSubmitting && <LoadingModal />}
+
+      <aside className={styles.formWrapper}>
       <h2 className={styles.title}>Book your campervan now</h2>
       <p className={styles.subtitle}>
         Stay connected! We are always ready to help you.
@@ -93,7 +97,7 @@ export default function BookingForm({ camperId }: BookingFormProps) {
                   setErrors((prev) => ({ ...prev, name: undefined }));
                 }
               }}
-              placeholder="Enter your name"
+              placeholder="Name*"
               className={`${styles.input} ${errors.name ? styles.inputError : ""}`}
             />
             {errors.name && (
@@ -121,7 +125,7 @@ export default function BookingForm({ camperId }: BookingFormProps) {
                   setErrors((prev) => ({ ...prev, email: undefined }));
                 }
               }}
-              placeholder="Enter your email"
+              placeholder="Email*"
               className={`${styles.input} ${errors.email ? styles.inputError : ""}`}
             />
             {errors.email && (
@@ -136,5 +140,6 @@ export default function BookingForm({ camperId }: BookingFormProps) {
         </button>
       </form>
     </aside>
+    </>
   );
 }

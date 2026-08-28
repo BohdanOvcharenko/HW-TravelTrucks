@@ -15,6 +15,13 @@ function formatDimension(value: string): string {
   return value.replace(/(\d+(?:\.\d+)?)(m|l|kWh)/i, "$1 $2");
 }
 
+function formatConsumption(value: string): string {
+  return value.replace(
+    /(\d+(?:\.\d+)?)\s*(l|kWh)\/100km/i,
+    "$1 $2 / 100km"
+  );
+}
+
 export default function CamperSpecs({ camper }: CamperSpecsProps) {
   const badges = [
     TRANSMISSION_LABELS[camper.transmission],
@@ -29,11 +36,14 @@ export default function CamperSpecs({ camper }: CamperSpecsProps) {
     { label: "Width", value: formatDimension(camper.width) },
     { label: "Height", value: formatDimension(camper.height) },
     { label: "Tank", value: formatDimension(camper.tank) },
-    { label: "Consumption", value: camper.consumption },
+    { label: "Consumption", value: formatConsumption(camper.consumption) },
   ];
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.section}>
+      <h2 className={styles.title}>Vehicle details</h2>
+
+      <div className={styles.wrapper}>
       <ul className={styles.badges}>
         {badges.map((badge) => (
           <li key={badge} className={styles.badge}>
@@ -50,6 +60,7 @@ export default function CamperSpecs({ camper }: CamperSpecsProps) {
           </div>
         ))}
       </dl>
+      </div>
     </div>
   );
 }

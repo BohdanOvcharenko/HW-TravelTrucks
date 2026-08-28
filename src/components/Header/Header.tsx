@@ -11,7 +11,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          TravelTrucks
+          <img src="/logo.svg" alt="TravelTrucks" width={136} height={16} />
         </Link>
 
         <nav className={styles.nav}>

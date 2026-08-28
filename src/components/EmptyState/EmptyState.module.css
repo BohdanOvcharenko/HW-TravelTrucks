@@ -11,11 +11,12 @@
 }
 
 .illustration {
-  width: 200px;
+  width: 488px;
+  max-width: 100%;
   margin-bottom: 32px;
 }
 
-.illustration svg {
+.illustration img {
   width: 100%;
   height: auto;
 }

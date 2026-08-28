@@ -13,10 +13,8 @@
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--main);
-  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
 }
 
 .nav {

@@ -1,6 +1,18 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--main);
+}
+
 .wrapper {
   padding: 24px;
-  border-radius: 10px;
+  border-radius: 16px;
   background: var(--inputs);
 }
 
@@ -12,10 +24,12 @@
 }
 
 .badge {
-  padding: 6px 12px;
+  padding: 12px 18px;
+  min-height: 48px;
   border-radius: 100px;
   background: var(--badges);
-  font-size: 14px;
+  mix-blend-mode: multiply;
+  font-size: 16px;
   color: var(--main);
 }
 

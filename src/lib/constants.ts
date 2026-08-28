@@ -35,10 +35,16 @@ export const AMENITY_LABELS: Record<string, string> = {
 };
 
 export function formatLocation(location: string): string {
-  const parts = location.split(",").map((part) => part.trim());
-  return parts.length > 1 ? parts.slice(1).join(", ") : location;
+  const parts = location.split(",").map((part) => part.trim()).filter(Boolean);
+
+  if (parts.length >= 2) {
+    const [country, city] = parts;
+    return `${city}, ${country}`;
+  }
+
+  return location;
 }
 
 export function formatReviewsCount(rating: number, count: number): string {
-  return `${rating}(${count} Review${count === 1 ? "" : "s"})`;
+  return `${rating} (${count} Review${count === 1 ? "" : "s"})`;
 }

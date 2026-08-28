@@ -38,7 +38,7 @@ export default function CatalogContent({ filtersData }: CatalogContentProps) {
   });
 
   const campers = data?.pages.flatMap((page) => page.campers) ?? [];
-  const showInitialLoader = isLoading || (isFetching && !isFetchingNextPage && !data);
+  const showLoader = isLoading || (isFetching && !isFetchingNextPage);
 
   const handleClear = () => {
     setActiveFilters({});
@@ -55,7 +55,7 @@ export default function CatalogContent({ filtersData }: CatalogContentProps) {
       />
 
       <section className={styles.listSection}>
-        {showInitialLoader && <LoadingModal />}
+        {showLoader && <LoadingModal />}
 
         {isError && (
           <p className={styles.message}>
@@ -63,24 +63,24 @@ export default function CatalogContent({ filtersData }: CatalogContentProps) {
           </p>
         )}
 
-        {!showInitialLoader && !isError && campers.length === 0 && (
+        {!showLoader && !isError && campers.length === 0 && (
           <EmptyState
             onClearFilters={handleClear}
             onViewAll={handleClear}
           />
         )}
 
-        {!showInitialLoader && campers.length > 0 && (
+        {!showLoader && campers.length > 0 && (
           <ul className={styles.list}>
-            {campers.map((camper) => (
+            {campers.map((camper, index) => (
               <li key={camper.id}>
-                <CamperCard camper={camper} />
+                <CamperCard camper={camper} priority={index === 0} />
               </li>
             ))}
           </ul>
         )}
 
-        {!showInitialLoader && hasNextPage && (
+        {!showLoader && hasNextPage && (
           <button
             type="button"
             className={styles.loadMore}

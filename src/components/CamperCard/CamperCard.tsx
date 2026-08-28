@@ -12,9 +12,10 @@ import styles from "./CamperCard.module.css";
 
 interface CamperCardProps {
   camper: CamperListItem;
+  priority?: boolean;
 }
 
-export default function CamperCard({ camper }: CamperCardProps) {
+export default function CamperCard({ camper, priority = false }: CamperCardProps) {
   return (
     <article className={styles.card}>
       <div className={styles.imageWrapper}>
@@ -22,7 +23,8 @@ export default function CamperCard({ camper }: CamperCardProps) {
           src={camper.coverImage}
           alt={camper.name}
           fill
-          sizes="400px"
+          sizes="219px"
+          priority={priority}
           className={styles.image}
         />
       </div>

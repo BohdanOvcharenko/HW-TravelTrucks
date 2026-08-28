@@ -16,7 +16,7 @@ async function getCamperData(camperId: string) {
       fetchCamperReviews(camperId),
     ]);
 
-    return { camper, reviews: reviewsData.value };
+    return { camper, reviews: reviewsData };
   } catch {
     return null;
   }

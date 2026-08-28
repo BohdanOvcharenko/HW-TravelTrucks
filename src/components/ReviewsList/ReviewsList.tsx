@@ -7,7 +7,7 @@ interface ReviewsListProps {
 }
 
 export default function ReviewsList({ reviews }: ReviewsListProps) {
-  if (reviews.length === 0) {
+  if (!reviews?.length) {
     return <p className={styles.empty}>No reviews yet.</p>;
   }
 

@@ -24,6 +24,11 @@ Backend: [Campers API](https://campers-api.goit.study/docs)
 
 Base URL: `https://campers-api.goit.study`
 
+## Links
+
+- **Repository:** [github.com/BohdanOvcharenko/HW-TravelTrucks](https://github.com/BohdanOvcharenko/HW-TravelTrucks)
+- **Live Demo:** add your Vercel or Netlify URL after deployment
+
 ## Getting Started
 
 ### Prerequisites
@@ -34,7 +39,7 @@ Base URL: `https://campers-api.goit.study`
 ### Installation
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/BohdanOvcharenko/HW-TravelTrucks.git
 cd HW-TravelTrucks
 npm install
 ```
@@ -69,6 +74,7 @@ The project is ready for deployment on [Vercel](https://vercel.com/) or [Netlify
 1. Push the repository to GitHub
 2. Import the project on Vercel/Netlify
 3. Deploy (no extra configuration required)
+4. Update the **Live Demo** link in this README with your deployment URL
 
 ## Author
 

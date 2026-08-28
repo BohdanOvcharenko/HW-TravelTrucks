@@ -7,8 +7,9 @@
 .item {
   display: flex;
   gap: 16px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--gray-light);
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--inputs);
 }
 
 .avatar {
@@ -22,7 +23,7 @@
   background: var(--badges);
   font-size: 18px;
   font-weight: 600;
-  color: var(--gray);
+  color: var(--button);
 }
 
 .content {
@@ -32,9 +33,10 @@
 
 .header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-height: 60px;
   margin-bottom: 8px;
 }
 
